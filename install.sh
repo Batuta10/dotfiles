@@ -18,10 +18,34 @@ echo '--- START apt install git --- \n'
 sudo apt install git
 echo '--- END apt install git ---\n'
 
+echo '--- START apt install ruby-full --- \n'
+sudo apt install ruby-full
+echo '--- END apt install ruby-full ---\n'
+
+echo '--- START apt install ruby-full --- \n'
+sudo gem install colorls
+echo '--- END apt install ruby-full ---\n'
+
 echo '--- START apt install zsh --- \n'
 sudo apt install zsh
 echo '--- END apt install zsh ---\n'
 
-echo '--- START apt install ruby-full --- \n'
-sudo apt install ruby-full
-echo '--- END apt install ruby-full ---\n'
+echo '--- START set zsh defaut shell --- \n'
+sudo chsh -s $(which zsh)
+echo '--- END set zsh defaut shell --- \n'
+
+echo '--- START get oh-my-zsh --- \n'
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo '--- END get oh-my-zsh --- \n'
+
+echo '--- START Set alias --- \n'
+echo '
+export PATH=~/.npm-global/bin:$PATH
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || p>
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# This loads nvm
+
+alias ll="colorls -lA --sd --group-directories-first"
+alias ls="colorls --group-directories-first"
+alias lss="colorls --group-directories-first -a"' >> .zshrc
+echo '--- END Set alias --- \n'
