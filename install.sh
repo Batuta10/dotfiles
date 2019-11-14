@@ -49,3 +49,7 @@ alias ll="colorls -lA --sd --group-directories-first"
 alias ls="colorls --group-directories-first"
 alias lss="colorls --group-directories-first -a"' >> .zshrc
 echo '--- END Set alias --- \n'
+
+echo '--- START install NVM --- \n'
+git clone https://github.com/nvm-sh/nvm.git .nvm
+echo '--- END install NVM --- \n'
