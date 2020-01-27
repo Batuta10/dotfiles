@@ -15,7 +15,7 @@ sudo apt autoremove
 echo '--- END apt autoremove ---\n'
 
 echo '--- START apt install git --- \n'
-sudo apt install git
+sudo apt install git curl
 echo '--- END apt install git ---\n'
 
 echo '--- START apt install ruby-full --- \n'
